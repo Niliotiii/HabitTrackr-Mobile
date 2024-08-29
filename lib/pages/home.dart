@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'detailsSpain.dart';
-import 'lugaresPopulares.dart';
-import 'message.dart';
-import 'perfil.dart';
+import '../detailsSpain.dart';
+import '../lugaresPopulares.dart';
+import '../message.dart';
+import '../perfil.dart';
 
 class MainScreen extends StatefulWidget {
   @override

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:dots_indicator/dots_indicator.dart';
-import 'home.dart';
+import 'pages/home.dart';
 
 class PageViewApp extends StatefulWidget {
   @override
