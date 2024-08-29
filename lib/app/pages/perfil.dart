@@ -8,19 +8,7 @@ class Perfil extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.transparent,
-        elevation: 0,
-        leading: Container(
-          padding: const EdgeInsets.all(8.0),
-          decoration: BoxDecoration(
-            color: Colors.black.withOpacity(0.2),
-            shape: BoxShape.circle,
-          ),
-          child: IconButton(
-            icon: const Icon(Icons.arrow_back, color: Color(0xFF1B1E28)),
-            onPressed: () => Navigator.of(context).pop(),
-          ),
-        ),
+        automaticallyImplyLeading: false,
         title: Text(
           'Perfil',
           style: GoogleFonts.abhayaLibre(
@@ -32,7 +20,7 @@ class Perfil extends StatelessWidget {
           Container(
             padding: const EdgeInsets.all(8.0),
             decoration: BoxDecoration(
-              color: Colors.black.withOpacity(0.2),
+              color: Colors.black.withOpacity(0.1),
               shape: BoxShape.circle,
             ),
             child: IconButton(
@@ -75,68 +63,17 @@ class Perfil extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 24),
+            // Row(
+            // add text Configurações align start
             Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Column(
-                  children: [
-                    Text(
-                      'Recompensa',
-                      style: GoogleFonts.abhayaLibre(
-                        fontSize: 14,
-                        fontWeight: FontWeight.normal,
-                        color: const Color(0xFF1B1E28),
-                      ),
-                    ),
-                    Text(
-                      '360',
-                      style: GoogleFonts.abhayaLibre(
-                        fontSize: 16,
-                        fontWeight: FontWeight.normal,
-                        color: const Color(0xFF0D6EFD),
-                      ),
-                    ),
-                  ],
-                ),
-                Column(
-                  children: [
-                    Text(
-                      'Viagens',
-                      style: GoogleFonts.abhayaLibre(
-                        fontSize: 14,
-                        fontWeight: FontWeight.normal,
-                        color: const Color(0xFF1B1E28),
-                      ),
-                    ),
-                    Text(
-                      '238',
-                      style: GoogleFonts.abhayaLibre(
-                        fontSize: 16,
-                        fontWeight: FontWeight.normal,
-                        color: const Color(0xFF0D6EFD),
-                      ),
-                    ),
-                  ],
-                ),
-                Column(
-                  children: [
-                    Text(
-                      'Lista de Desejos',
-                      style: GoogleFonts.abhayaLibre(
-                        fontSize: 14,
-                        fontWeight: FontWeight.normal,
-                        color: const Color(0xFF1B1E28),
-                      ),
-                    ),
-                    Text(
-                      '473',
-                      style: GoogleFonts.abhayaLibre(
-                        fontSize: 16,
-                        fontWeight: FontWeight.normal,
-                        color: const Color(0xFF0D6EFD),
-                      ),
-                    ),
-                  ],
+                Text(
+                  'Configurações',
+                  style: GoogleFonts.abhayaLibre(
+                      fontSize: 18,
+                      fontWeight: FontWeight.normal,
+                      color: const Color(0xFF1B1E28)),
                 ),
               ],
             ),
@@ -201,13 +138,13 @@ class Perfil extends StatelessWidget {
   String _getTitleForIndex(int index) {
     switch (index) {
       case 0:
-        return 'Perfil';
+        return 'Tema';
       case 1:
-        return 'Marcado como favorito';
+        return 'Paginas e Funções';
       case 2:
-        return 'Viagens anteriores';
+        return 'Gerencie o Hábit';
       case 3:
-        return 'Configurações';
+        return 'Mais Configurações';
       case 4:
         return 'Versão';
       default:
