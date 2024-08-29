@@ -6,6 +6,7 @@ import 'app/pages/details.dart';
 import 'app/pages/home.dart';
 import 'app/pages/init.dart';
 import 'app/pages/integrado.dart';
+import 'app/pages/new-habit.dart';
 import 'app/pages/perfil.dart';
 import 'app/widgets/destination.dart';
 
@@ -55,6 +56,9 @@ class Main extends StatelessWidget {
             return MaterialPageRoute(builder: (context) => const Perfil());
           case '/mensagens':
             return MaterialPageRoute(builder: (context) => const Mensagens());
+          case '/new-habit':
+            return MaterialPageRoute(
+                builder: (context) => const NewHabitPage());
           default:
             return MaterialPageRoute(builder: (context) => const InitPage());
         }
