@@ -4,8 +4,8 @@ import 'package:flutter/material.dart';
 
 import 'app/pages/details.dart';
 import 'app/pages/home.dart';
+import 'app/pages/init.dart';
 import 'app/pages/integrado.dart';
-import 'app/pages/login.dart';
 import 'app/pages/perfil.dart';
 import 'app/widgets/destination.dart';
 
@@ -37,8 +37,8 @@ class Main extends StatelessWidget {
         switch (settings.name) {
           case '/main':
             return MaterialPageRoute(builder: (context) => const Main());
-          case '/login':
-            return MaterialPageRoute(builder: (context) => Login());
+          case '/init':
+            return MaterialPageRoute(builder: (context) => const InitPage());
           case '/integrado':
             return MaterialPageRoute(builder: (context) => const Integrado());
           case '/home':
@@ -56,10 +56,10 @@ class Main extends StatelessWidget {
           case '/mensagens':
             return MaterialPageRoute(builder: (context) => const Mensagens());
           default:
-            return MaterialPageRoute(builder: (context) => Login());
+            return MaterialPageRoute(builder: (context) => const InitPage());
         }
       },
-      initialRoute: '/login',
+      initialRoute: '/init',
     );
   }
 }
