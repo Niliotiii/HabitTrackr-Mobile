@@ -43,7 +43,7 @@ class Main extends StatelessWidget {
           case '/integrado':
             return MaterialPageRoute(builder: (context) => const Integrado());
           case '/home':
-            return MaterialPageRoute(builder: (context) => const Home());
+            return MaterialPageRoute(builder: (context) => Home());
           case '/details':
             final Destination args = settings.arguments as Destination;
             return MaterialPageRoute(
