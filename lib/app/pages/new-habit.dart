@@ -214,7 +214,7 @@ class _NewHabitPageState extends State<NewHabitPage> {
       enabled: enabled,
       decoration: InputDecoration(
         border: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(50),
+          borderRadius: BorderRadius.circular(15),
         ),
         filled: true,
         fillColor: Colors.grey[200],

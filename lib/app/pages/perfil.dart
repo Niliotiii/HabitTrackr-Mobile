@@ -63,8 +63,6 @@ class Perfil extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 24),
-            // Row(
-            // add text Configurações align start
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [

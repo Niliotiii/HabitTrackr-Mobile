@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
-import 'today.dart'; // Ensure this imports your Today screen
-import '../widgets/navigator.dart'; // Import your custom navigator
+import 'today.dart';
+import '../widgets/navigator.dart';
+import 'new-habit.dart';
+import 'allHabits.dart';
+import 'friends.dart';
+import 'perfil.dart';
 
 class Home extends StatefulWidget {
   @override
@@ -10,12 +14,11 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   int _selectedIndex = 0;
 
-  // List of screens for bottom navigation items
   final List<Widget> _pages = <Widget>[
-    Today(), // The Today screen
-    Center(child: Text('Página 1')), // Placeholder for the second screen
-    Center(child: Text('Página 2')), // Placeholder for the third screen
-    Center(child: Text('Página 3')), // Placeholder for the fourth screen
+    Today(),
+    AllHabitsScreen(),
+    FriendsPage(),
+    Perfil(),
   ];
 
   void _onItemTapped(int index) {
@@ -27,10 +30,13 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: _pages[_selectedIndex], // Display the selected page
+      body: _pages[_selectedIndex],
       floatingActionButton: CustomFab(
         onFabPressed: () {
-          // Action for the central floating button
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => NewHabitPage()),
+          );
         },
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
